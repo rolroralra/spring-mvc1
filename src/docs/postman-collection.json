@@ -1,0 +1,869 @@
+{
+	"info": {
+		"_postman_id": "de59bb02-6bb8-4fca-a485-585ae422ec70",
+		"name": "SpringMVC Part1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3628782"
+	},
+	"item": [
+		{
+			"name": "basic",
+			"item": [
+				{
+					"name": "/hello-basic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/hello-basic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hello-basic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/mapping-get-v1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/mapping-get-v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mapping-get-v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/mapping-get-v2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/mapping-get-v2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mapping-get-v2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/mapping/{userId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/mapping/rolroralra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mapping",
+								"rolroralra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/mapping/users/{userId}/orders/1234",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/mapping/users/rolroralra/orders/1234",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mapping",
+								"users",
+								"rolroralra",
+								"orders",
+								"1234"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/mapping/users/{userId}/orders/1234 Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/mapping-param?mode=debug",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mapping-param"
+							],
+							"query": [
+								{
+									"key": "mode",
+									"value": "debug"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/mapping/users/{userId}/orders/1234 Copy 2",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "mode",
+								"value": "debug",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/mapping-header",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mapping-header"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/mapping-consume",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/mapping-consume",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mapping-consume"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/mapping-produce",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/plain",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/mapping-produce",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mapping-produce"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "request-mapping",
+			"item": [
+				{
+					"name": "/mapping/users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/mapping/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mapping",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/mapping/users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/mapping/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mapping",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/mapping/users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/mapping/users/rolroralra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mapping",
+								"users",
+								"rolroralra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/mapping/users",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/mapping/users/rolroralra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mapping",
+								"users",
+								"rolroralra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/mapping/users",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/mapping/users/rolroralra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mapping",
+								"users",
+								"rolroralra"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "request",
+			"item": [
+				{
+					"name": "/headers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/headers?header1=1&header2=header2&Cookie=123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"headers"
+							],
+							"query": [
+								{
+									"key": "header1",
+									"value": "1"
+								},
+								{
+									"key": "header2",
+									"value": "header2"
+								},
+								{
+									"key": "Cookie",
+									"value": "123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request-param-v1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/request-param-v1?username=rolroralra&age=35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"request-param-v1"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "rolroralra"
+								},
+								{
+									"key": "age",
+									"value": "35"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request-param-v2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/request-param-v2?username=rolroralra&age=35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"request-param-v2"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "rolroralra"
+								},
+								{
+									"key": "age",
+									"value": "35"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request-param-v3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/request-param-v3?username=rolroralra&age=35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"request-param-v3"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "rolroralra"
+								},
+								{
+									"key": "age",
+									"value": "35"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request-param-v4",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/request-param-v4?username=rolroralra&age=35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"request-param-v4"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "rolroralra"
+								},
+								{
+									"key": "age",
+									"value": "35"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request-param-required",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/request-param-required?username=rolroralra&age=35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"request-param-required"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "rolroralra"
+								},
+								{
+									"key": "age",
+									"value": "35"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request-param-default",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/request-param-default?username=rolroralra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"request-param-default"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "rolroralra"
+								},
+								{
+									"key": "age",
+									"value": "35",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/model-attribute-v1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/model-attribute-v1?username=rolroralra&age=35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"model-attribute-v1"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "rolroralra"
+								},
+								{
+									"key": "age",
+									"value": "35"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/model-attribute-v2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/model-attribute-v2?username=rolroralra&age=35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"model-attribute-v2"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "rolroralra"
+								},
+								{
+									"key": "age",
+									"value": "35"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request-body-string-v1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "hello rolroralra"
+						},
+						"url": {
+							"raw": "http://localhost:8080/request-body-string-v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"request-body-string-v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request-body-string-v2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\": \"rolroralra\"}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/request-body-string-v2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"request-body-string-v2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request-body-string-v3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\": \"rolroralra\"}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/request-body-string-v3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"request-body-string-v3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request-body-string-v4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\": \"rolroralra\"}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/request-body-string-v4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"request-body-string-v4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request-body-json-v1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"rolroralra\",\n    \"age\": 35\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/request-body-json-v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"request-body-json-v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request-body-json-v2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"rolroralra\",\n    \"age\": 35\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/request-body-json-v2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"request-body-json-v2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request-body-json-v3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"rolroralra\",\n    \"age\": 35\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/request-body-json-v3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"request-body-json-v3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request-body-json-v4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"rolroralra\",\n    \"age\": 35\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/request-body-json-v4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"request-body-json-v4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request-body-json-v5",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"rolroralra\",\n    \"age\": 35\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/request-body-json-v5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"request-body-json-v5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request-body-json-v6",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"rolroralra\",\n    \"age\": 35\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/request-body-json-v6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"request-body-json-v6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
