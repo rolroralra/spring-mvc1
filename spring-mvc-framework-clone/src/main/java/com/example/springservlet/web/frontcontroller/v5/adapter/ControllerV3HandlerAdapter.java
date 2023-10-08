@@ -1,0 +1,27 @@
+package com.example.springservlet.web.frontcontroller.v5.adapter;
+
+import com.example.springservlet.web.frontcontroller.ModelView;
+import com.example.springservlet.web.frontcontroller.v3.ControllerV3;
+import com.example.springservlet.web.frontcontroller.v5.AbstractHandlerAdapter;
+import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class ControllerV3HandlerAdapter extends AbstractHandlerAdapter {
+
+    @Override
+    public boolean supports(Object handler) {
+        return handler instanceof ControllerV3;
+    }
+
+    @Override
+    public ModelView handle(HttpServletRequest request, HttpServletResponse response,
+        Object handler) {
+
+        ControllerV3 controller = (ControllerV3) handler;
+
+        Map<String, String> paramMap = createParamMap(request);
+
+        return controller.process(paramMap);
+    }
+}
