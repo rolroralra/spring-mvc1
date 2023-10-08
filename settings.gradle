@@ -1,1 +1,4 @@
-rootProject.name = 'springMvc-part1-2'
+rootProject.name = 'spring-mvc1'
+
+include ':spring-mvc-framework-clone'
+include ':spring-mvc-basic'
